@@ -35,7 +35,7 @@ See instructions for [setup](setup-sgx-testnet.md) and [verification](verify-sgx
 ### 1. Download the Secret Network package installer for Debian/Ubuntu:
 
 ```bash
-wget https://github.com/chainofsecrets/SecretNetwork/releases/download/v1.0.0/secretnetwork_1.0.0_amd64.deb
+wget https://github.com/scrtlabs/SecretNetwork/releases/download/v1.3.1/secretnetwork_1.3.1_testnet_goleveldb_amd64.deb
 ```
 
 ([How to verify releases](../verify-releases.md))
@@ -43,7 +43,7 @@ wget https://github.com/chainofsecrets/SecretNetwork/releases/download/v1.0.0/se
 ### 2. Install the package:
 
 ```bash
-sudo dpkg -i secretnetwork_1.0.0_amd64.deb
+sudo dpkg -i secretnetwork_1.3.1_testnet_goleveldb_amd64.deb
 ```
 
 ### 3. Initialize your installation of the Secret Network.
@@ -52,13 +52,13 @@ Choose a **moniker** for yourself, and replace `<MONIKER>` with your moniker bel
 This moniker will serve as your public nickname in the network.
 
 ```bash
-secretd init <MONIKER> --chain-id holodeck-2
+secretd init <MONIKER> --chain-id pulsar-2
 ```
 
 ### 4. Download a copy of the Genesis Block file: `genesis.json`
 
 ```bash
-wget -O ~/.secretd/config/genesis.json "https://github.com/chainofsecrets/SecretNetwork/releases/download/v1.0.0/holodeck-2-genesis.json"
+wget -O ~/.secretd/config/genesis.json "https://github.com/chainofsecrets/SecretNetwork/releases/download/v1.3.1/pulsar-2-genesis.json"
 ```
 
 ### 5. Validate the checksum for the `genesis.json` file you have just downloaded in the previous step:
@@ -123,7 +123,7 @@ To run the steps with `secretcli` on another machine, [set up the CLI](install_c
 Configure `secretcli`. Initially you'll be using the bootstrap node, as you'll need to connect to a running node and your own node is not running yet.
 
 ```bash
-secretcli config chain-id holodeck-2
+secretcli config chain-id pulsar-2
 secretcli config node tcp://bootstrap.secrettestnet.io:26657
 secretcli config output json
 secretcli config indent true
@@ -245,7 +245,7 @@ If someone wants to add you as a peer, have them add the above address to their 
 And if someone wants to use your node from their `secretcli` then have them run:
 
 ```bash
-secretcli config chain-id holodeck-2
+secretcli config chain-id pulsar-2
 secretcli config output json
 secretcli config indent true
 secretcli config node tcp://<your-public-ip>:26657
