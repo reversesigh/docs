@@ -148,7 +148,7 @@ Note: If you delete or lose either the .secretd or the .sgx_secrets folder your 
 
 - MONIKER - your network name
 - RPC_URL - address of a node with an open RPC service (you can use `bootstrap.secrettestnet.io:26657`)
-- CHAINID - chain-id of the network (for testnet this is `holodeck-2`)
+- CHAINID - chain-id of the network (for testnet this is `pulsar-2`)
 - PERSISTENT_PEERS - List of peers to connect to initially (for this testnet use `64b03220d97e5dc21ec65bf7ee1d839afb6f7193@bootstrap.secrettestnet.io:26656`)
 - REGISTRATION_SERVICE - Address of registration service (this will help the node start automatically without going through all the manual steps in the other guide) - `bootstrap.secrettestnet.io:26667`
 
